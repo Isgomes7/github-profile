@@ -5,11 +5,6 @@ $(function () {
     const $input = $("#user-search");
     const $avatar = $("#avatar");
 
-    function resetarPerfil() {
-        $avatar.attr("src", "https://avatars.githubusercontent.com/u/583231?v=4");
-        $dropdown.hide();
-    }
-
     function buscarSugestoes(query) {
         $.ajax({
             url: `https://api.github.com/search/users?q=${query}+in:login&per_page=3`,
@@ -116,10 +111,10 @@ $(function () {
                                         }
 
                                         $(`#${repoId} .commits`).html(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="18" y="15" width="4" height="4" rx="2" transform="rotate(90 18 15)" stroke="#97A3B6" stroke-width="2"/>
-<rect x="6" y="8" width="4" height="4" rx="2" transform="rotate(-90 6 8)" stroke="#97A3B6" stroke-width="2"/>
-<path d="M8 8V13C8 14.8856 8 15.8284 8.58579 16.4142C9.17157 17 10.1144 17 12 17H14" stroke="#97A3B6" stroke-width="2"/>
-</svg> ${totalCommits}`);
+                                        <rect x="18" y="15" width="4" height="4" rx="2" transform="rotate(90 18 15)" stroke="#97A3B6" stroke-width="2"/>
+                                        <rect x="6" y="8" width="4" height="4" rx="2" transform="rotate(-90 6 8)" stroke="#97A3B6" stroke-width="2"/>
+                                        <path d="M8 8V13C8 14.8856 8 15.8284 8.58579 16.4142C9.17157 17 10.1144 17 12 17H14" stroke="#97A3B6" stroke-width="2"/>
+                                        </svg> ${totalCommits}`);
                                     },
                                     error: function () {
                                         $(`#${repoId} .commits`).text(`Commits: não disponível`);
@@ -140,11 +135,6 @@ $(function () {
     $input.on("input", function () {
         clearTimeout(debounce);
         const query = $(this).val().trim();
-
-        if (!query) {
-            resetarPerfil();
-            return;
-        }
 
         debounce = setTimeout(() => {
             buscarSugestoes(query);

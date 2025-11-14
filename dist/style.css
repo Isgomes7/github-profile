@@ -590,10 +590,6 @@ video {
   top: 50%;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .z-20 {
   z-index: 20;
 }
@@ -1002,6 +998,9 @@ html{
 
 .last-repo{
   background-image: linear-gradient(95deg, #111729 3%, #1d1b48 99.61%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
   border-radius: 0.5rem;
   padding: 1.5rem;
 }
@@ -1014,7 +1013,6 @@ html{
 }
 
 .last-repo p.description {
-  margin-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
@@ -1022,7 +1020,7 @@ html{
 }
 
 .last-repo .wrapper-info-repo {
-  margin-top: 1.5rem;
+  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1067,36 +1065,9 @@ html{
   background-color: rgb(17 22 41 / var(--tw-bg-opacity, 1));
 }
 
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.focus\:outline-\[\]:focus {
-  outline-width: ;
-}
-
-.focus\:outline-\[\#48398e\]:focus {
-  outline-color: #48398e;
-}
-
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus-visible\:outline-white:focus-visible {
-  outline-color: #fff;
-}
-
-.focus-visible\:ring-rose-500:focus-visible {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(244 63 94 / var(--tw-ring-opacity, 1));
-}
-
-.focus-visible\:ring-white:focus-visible {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
 }
 
 @media (min-width: 1024px) {
