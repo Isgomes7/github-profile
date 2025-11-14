@@ -590,8 +590,16 @@ video {
   top: 50%;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-20 {
   z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .mx-auto {
@@ -603,16 +611,16 @@ video {
   margin-top: -5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .me-2 {
   margin-inline-end: 0.5rem;
 }
 
-.inline {
-  display: inline;
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .flex {
@@ -623,9 +631,17 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .size-36 {
   width: 9rem;
   height: 9rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-14 {
@@ -636,16 +652,12 @@ video {
   height: 2rem;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
 .min-h-\[240px\] {
   min-height: 240px;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-full {
@@ -654,18 +666,6 @@ video {
 
 .w-px {
   width: 1px;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .max-w-\[1200px\] {
@@ -740,6 +740,10 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -757,10 +761,6 @@ video {
 .bg-\[\#364153\] {
   --tw-bg-opacity: 1;
   background-color: rgb(54 65 83 / var(--tw-bg-opacity, 1));
-}
-
-.fill-\[\] {
-  fill: ;
 }
 
 .fill-\[\#424196\] {
@@ -826,6 +826,11 @@ video {
   font-weight: 400;
 }
 
+.text-\[\#111629\] {
+  --tw-text-opacity: 1;
+  color: rgb(17 22 41 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#A2AAB7\] {
   --tw-text-opacity: 1;
   color: rgb(162 170 183 / var(--tw-text-opacity, 1));
@@ -836,9 +841,10 @@ video {
   color: rgb(205 213 224 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#111629\] {
-  --tw-text-opacity: 1;
-  color: rgb(17 22 41 / var(--tw-text-opacity, 1));
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @font-face {
@@ -1043,6 +1049,54 @@ html{
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(135 146 164 / var(--tw-text-opacity, 1));
+}
+
+.user-dropdown {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.user-dropdown:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 22 41 / var(--tw-bg-opacity, 1));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:outline-\[\]:focus {
+  outline-width: ;
+}
+
+.focus\:outline-\[\#48398e\]:focus {
+  outline-color: #48398e;
+}
+
+.focus-visible\:outline-none:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-visible\:outline-white:focus-visible {
+  outline-color: #fff;
+}
+
+.focus-visible\:ring-rose-500:focus-visible {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(244 63 94 / var(--tw-ring-opacity, 1));
+}
+
+.focus-visible\:ring-white:focus-visible {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
 }
 
 @media (min-width: 1024px) {

@@ -13,13 +13,18 @@
     <header class="relative">
         <img src="./src/images/hero-image-github-profile.jpg" alt="Background Github" loading="lazy"
             class="w-full min-h-[240px] object-cover">
-        <div class="absolute top-10 left-2/4 -translate-x-2/4 w-full max-w-[600px] px-5 lg:px-0">
+        <div class="absolute top-10 left-2/4 -translate-x-2/4 w-full max-w-[600px] px-5 lg:px-0 z-30">
             <div class="relative w-full">
                 <input placeholder="Username" id="user-search"
-                    class="bg-[#20293A] text-[#CDD5E0] rounded-xl w-full h-14 pl-14">
-                <img src="./src/images/Search.svg" alt="Search" loading="lazy"
-                    class="absolute top-2/4 -translate-y-2/4 left-4">
+                    class="bg-[#20293A] text-[#CDD5E0] rounded-xl w-full h-14 pl-14 focus-visible:outline-none">
+                <button id="buscar" class="absolute top-2/4 -translate-y-2/4 left-4">
+                    <img src="./src/images/Search.svg" alt="Search" loading="lazy">
+                </button>
             </div>
+
+            <ul id="dropdown-list"
+                class="w-full mt-1 bg-[#20293A] text-[#CDD5E0] rounded-xl shadow-lg hidden overflow-hidden">
+            </ul>
         </div>
     </header>
 
@@ -56,7 +61,8 @@
                 <p class="text-[#A2AAB7] font-medium text-xl">How people build software.</p>
             </div>
 
-            <div id="repositorios" role="status" class="text-[#CDD5E0] font-normal text-lg mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div id="repositorios" role="status"
+                class="text-[#CDD5E0] font-normal text-lg mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <svg aria-hidden="true" class="w-10 h-10 me-2 text-[#111629] animate-spin fill-[#424196]"
                     viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
