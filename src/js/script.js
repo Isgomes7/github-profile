@@ -101,6 +101,12 @@ $(function () {
                                 $.ajax({
                                     url: `https://api.github.com/repos/${username}/${repo.name}/commits?per_page=1`,
                                     method: "GET",
+
+                                    headers: {
+                                        "Accept": "application/vnd.github+json",
+                                        "User-Agent": "request" // ESSENCIAL
+                                    },
+
                                     complete: function (xhr) {
                                         const link = xhr.getResponseHeader("Link");
                                         let totalCommits = 1;
